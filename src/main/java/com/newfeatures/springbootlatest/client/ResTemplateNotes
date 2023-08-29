@@ -1,0 +1,32 @@
+RestTemplate is the Spring class for client-side HTTP access and map the response for you.
+It is a synchronous REST client performing HTTP requests using a simple template-style API.
+It uses JDK HttpURLConnection and Apache HttpComponents under the hood.
+
+getForEntity(): executes a GET request and returns an object of ResponseEntity class that contains both the status code and the resource as an object.
+getForObject() : similar to getForEntity(), but returns the resource object directly.
+postForObject() : creates a new resource using HTTP POST method and returns an entity.
+postForLocation(): creates a new resource using the HTTP POST method and returns the location of the newly created resource.
+delete(url) — deletes the resource at the specified URL.
+put(url, request) — PUTs the given request object to the URL.
+exchange(url, httpMethod, requestEntity, responseType) — execute the specified HTTP method,
+ such as GET, POST, PUT, etc, and return the response as ResponseEntity.
+execute(url, httpMethod, requestCallback, responseExtractor) —
+execute the httpMethod to the given URI template, prepare the request with the RequestCallback, and read the response with a ResponseExtractor.
+
+
+FeignClient
+Feign, we have to define only the interfaces and annotate them accordingly. The actual web client implementation is then provided by Spring at runtime.
+ Behind the scenes, the @FeignClient makes a synchronous HTTP requests and it is based on thread-per-request
+
+ why feign over restTemplate
+ coding is easier , we code to interface rather that implemntation classes
+
+ As we discussed above, the two rest clients are follow synchronous process.
+ It means that the call is executed by the same thread which makes the call.
+ Then until you finish consuming the API response you can’t execute any other piece of code.
+
+We can use CompletableFuture whihc is anaysnchromous call
+
+
+
+

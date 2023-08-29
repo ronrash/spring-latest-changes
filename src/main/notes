@@ -1,0 +1,30 @@
+New Features of Spring boot are
+Java 17 support
+Observabilty
+// this will help us to publish the metrics to the micrometer or any other 3rd party
+        // first param is the metric name
+Jakarat
+ProblemDetail is a class whihc helps us to manage the exceptions better by providing som features
+as type of erro , title status detail message url of the exception
+
+{
+    "type": "about:blank",
+    "title": "Customer not Found",
+    "status": 400,
+    "detail": "Customer with id 2 is not presend",
+    "instance": "/api/v1/customers/2"
+}
+
+
+Record
+//Immutability: By default, record components are made final, contributing to immutability.
+//Conciseness: Records provide a more concise syntax for defining classes that mainly store data.
+// You don't need to write boilerplate code for constructors, equals, hashCode, and toString methods.
+// The compiler generates these methods for you based on the record's components.
+
+
+HttpExchange
+
+
+
+
